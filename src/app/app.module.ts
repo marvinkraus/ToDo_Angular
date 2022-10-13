@@ -11,6 +11,7 @@ import { ListDetailsComponent } from './list-details/list-details.component';
 import {MatMenuModule} from '@angular/material/menu'; 
 import { FormsModule } from '@angular/forms';
 import { ListElementsComponent } from './list-elements/list-elements.component';
+import {MatListModule} from '@angular/material/list'; 
 
 
 
@@ -29,7 +30,8 @@ import { ListElementsComponent } from './list-elements/list-elements.component';
     MatIconModule,
     HttpClientModule,
     MatMenuModule,
-    FormsModule
+    FormsModule,
+    MatListModule
 
     
   ],
