@@ -16,28 +16,18 @@
 </mat-card>
 
 <mat-card>
-  <mat-selection-list>
+  <mat-selection-list #onelist [multiple]="false">
     <h1 id="header-mat-card">To Do List</h1>
-    <mat-list-option  class="mat-list-option" class="mat-primary" name="selectedList"  *ngFor="let todoList of list"  [value]="todoList"   (click)="assignSelected(todoList)"> {{todoList.name}}
-      <div style="display:flex; justify-content:space-between;align-items:center">
-        <div>
-          <div>
+    <div style=" justify-content:space-between;align-items:center;">
+    <mat-list-option  class="mat-list-option"  name="selectedList"  *ngFor="let todoList of list"  [value]="todoList"   (click)="assignSelected(todoList)"> {{todoList.name}}
+     <!-- <button mat-icon-button>
+        <mat-icon>delete</mat-icon>
+      </button>  -->
   
-            <div style="margin-top:-30px">
-              <p matLine>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <button mat-icon-button>
-            <mat-icon>delete</mat-icon>
-          </button>
-        </div>
-      </div>
-    </mat-list-option>
+    </mat-list-option> </div>
   </mat-selection-list>
   </mat-card>
+
 
 <!--mat-card  color="primary">
 <h1 id="header-mat-card">To Do List</h1>
