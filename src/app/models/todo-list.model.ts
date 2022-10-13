@@ -1,4 +1,4 @@
-
+//class that reprents a single model
 
 export class TodoListModel {
     private _id: string;

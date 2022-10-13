@@ -39,6 +39,8 @@ export class RestService {
     return this.http.post(url, body, {});
 
   }
+
+  //NOt tested
   getSingle(parentID:string): Observable<any>{
     let url: string = this.path.join(this.baseURL, this.nachname, parentID);
     return this.http.get(url, {});
