@@ -7,6 +7,16 @@
 <label>Name der Liste</label>
 <input type="text" name="name" [(ngModel)]="name" >
 <input type="submit" name="submit" (click)="createList(name)">
+</form>
 
 
-<p *ngFor="let todoList of list">{{todoList.name}}</p>
+
+<mat-selection-list   role="list" class="listselector">
+    <mat-list-option  name="selectedList"  *ngFor="let todoList of list"  [value]="todoList"   (click)="assignSelected(todoList)"  >  {{todoList.name}} 
+        
+    </mat-list-option>
+   
+  </mat-selection-list>
+  
+
+<app-list-elements></app-list-elements>
