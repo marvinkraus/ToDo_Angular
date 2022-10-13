@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { todoListDetails } from 'app/models/todo-list-details.model';
 import { TodoListType } from 'app/types/todo-list.type';
 import { TodoListModel } from '../models/todo-list.model';
 import { ConverterListService } from '../service/converter-list.service';
@@ -15,7 +16,11 @@ export class ListOverviewComponent implements OnInit {
   public list: TodoListModel[] = []; 
   
   public name: string ="";
+  
+ // public testData:todoListDetails = new todoListDetails("f","f", true, "f");
   public selectedList:TodoListModel = new TodoListModel("f","f");
+
+  
   
 
   constructor(private rest: RestService, private converter: ConverterListService) {

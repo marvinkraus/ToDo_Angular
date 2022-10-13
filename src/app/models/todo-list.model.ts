@@ -1,12 +1,18 @@
+
+
 export class TodoListModel {
     private _id: string;
     private _name: string;
+  
 
     constructor(name:string, id:string)
     {
         this._name = name;
         this._id = id;
+    
     }
+
+
 
 
     get id(): string|undefined{

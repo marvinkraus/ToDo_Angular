@@ -12,6 +12,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import { ListElementsComponent } from './list-elements/list-elements.component';
 import {MatListModule} from '@angular/material/list'; 
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -31,7 +32,8 @@ import {MatListModule} from '@angular/material/list';
     HttpClientModule,
     MatMenuModule,
     FormsModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
 
     
   ],

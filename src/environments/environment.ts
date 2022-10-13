@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   baseURL: "http://mock.dev.xtain.net/",
+  //TODO URL für tasks und liste
   nachname: "all"
 };
 

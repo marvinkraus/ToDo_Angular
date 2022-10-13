@@ -17,6 +17,7 @@ export class RestService {
   private baseURL:string;
   private nachname:string;
 
+
   constructor(private http: HttpClient, private path: PathService) { 
     this.baseURL = environment.baseURL;
     this.nachname = environment.nachname;
@@ -38,4 +39,6 @@ export class RestService {
     return this.http.post(url, body, {});
 
   }
+
+  //TODO getSingle(id:string):Observab (this.singleURL, this.iD)
 }

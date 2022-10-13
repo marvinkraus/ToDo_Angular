@@ -1,4 +1,5 @@
 import { Component, OnInit , Input} from '@angular/core';
+import { TodoListModel } from 'app/models/todo-list.model';
 import { TodoListType } from 'app/types/todo-list.type';
 
 @Component({
@@ -8,10 +9,15 @@ import { TodoListType } from 'app/types/todo-list.type';
 })
 export class ListElementsComponent implements OnInit {
 
-  @Input() currentList?: TodoListType;
+  @Input() currentList?: TodoListModel;
   constructor() { }
 
+
+
   ngOnInit(): void {
+
+    let test:TodoListModel = new TodoListModel("test", "test2")
+    this.currentList = test;
   }
 
 }
