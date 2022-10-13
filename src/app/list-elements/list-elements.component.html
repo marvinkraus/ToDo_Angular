@@ -1,7 +1,9 @@
-<p>list-elements works!</p>
+
 
 <p *ngIf="currentList">
     [{{currentList.name}}] fdhg
  </p>
+
+ <p *ngFor="let task of testelements.alltasks"    > {{task.taskname}}</p>
 
 <app-list-details></app-list-details>

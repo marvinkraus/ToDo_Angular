@@ -39,6 +39,10 @@ export class RestService {
     return this.http.post(url, body, {});
 
   }
+  getSingle(parentID:string): Observable<any>{
+    let url: string = this.path.join(this.baseURL, this.nachname, parentID);
+    return this.http.get(url, {});
+  }
 
   //TODO getSingle(id:string):Observab (this.singleURL, this.iD)
 }

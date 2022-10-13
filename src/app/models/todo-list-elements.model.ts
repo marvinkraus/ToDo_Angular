@@ -1,6 +1,6 @@
 import { singletask } from "./todo-list-singletask-model";
 
-export class todoListDetails{
+export class todoListElements{
     private _parentid:string;
     private _alletasks :singletask[];
 
