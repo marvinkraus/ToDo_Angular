@@ -1,4 +1,15 @@
-.checkmark {
+input[type=checkbox]{
     height:40px;
     width: 40px;
+    text-align: center;
+    margin-left: 95%;
+    padding: 5%;
+    
+}
+
+mat-card-title{
+    border-style: solid;
+    border: 5px;
+    border-color: black;
+    
 }

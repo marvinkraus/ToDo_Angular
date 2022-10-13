@@ -2,13 +2,15 @@
 
 
 
-<mat-card *ngIf="currentTask">
+<mat-card *ngIf="currentTask">   
     <mat-card-title>Taskname: {{currentTask.taskname}} 
-
-        <form class="checkmark">
+        <form>
             <input type="checkbox">
         </form>
+       
     </mat-card-title>
+    <hr>
+   
     <mat-card-content>
     <p >
         {{currentTask.taskdescription}} 
