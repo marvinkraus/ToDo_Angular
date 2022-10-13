@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { singletask } from 'app/models/todo-list-singletask-model';
 
 @Component({
   selector: 'app-list-details',
@@ -9,7 +10,13 @@ export class ListDetailsComponent implements OnInit {
 
   constructor() { }
 
+ 
+
+  @Input() currentTask?: singletask;
+
   ngOnInit(): void {
   }
+
+
 
 }

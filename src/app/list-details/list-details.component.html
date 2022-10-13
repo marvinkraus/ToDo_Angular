@@ -1,1 +1,29 @@
-<p>list-details works!</p>
+
+
+
+
+<mat-card *ngIf="currentTask">
+    <mat-card-title>Taskname: {{currentTask.taskname}} 
+
+        <form class="checkmark">
+            <input type="checkbox">
+        </form>
+    </mat-card-title>
+    <mat-card-content>
+    <p >
+        {{currentTask.taskdescription}} 
+     </p>
+    
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-button>UPDATE</button>
+        <button mat-button>DELETE</button>
+      
+
+    </mat-card-actions>
+</mat-card>
+
+
+
+ 

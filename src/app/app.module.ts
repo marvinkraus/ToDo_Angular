@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { ListElementsComponent } from './list-elements/list-elements.component';
 import {MatListModule} from '@angular/material/list'; 
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button'; 
 
 
 
@@ -33,7 +34,8 @@ import {MatCardModule} from '@angular/material/card';
     MatMenuModule,
     FormsModule,
     MatListModule,
-    MatCardModule
+    MatCardModule, 
+    MatButtonModule
 
     
   ],

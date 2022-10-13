@@ -1,3 +1,5 @@
+//class that describes a single task
+
 export class singletask{
     private _parentid:string;
    private _taskname:string;

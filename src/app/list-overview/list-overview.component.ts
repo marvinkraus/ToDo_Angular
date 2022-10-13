@@ -17,7 +17,7 @@ export class ListOverviewComponent implements OnInit {
   
   public name: string ="";
 
- // public testData:todoListDetails = new todoListDetails("f","f", true, "f");
+  //saves the current selectedList
   public selectedList:TodoListModel = new TodoListModel("f","f");
 
   
@@ -32,6 +32,7 @@ export class ListOverviewComponent implements OnInit {
     this.getOverview();
   }
 
+  //gets overview of all existing todolist the person has
   getOverview():void{
     this.rest.getAll().subscribe({
       next: (value) => {
@@ -45,12 +46,14 @@ export class ListOverviewComponent implements OnInit {
     });
   }
 
+  //creates a new todolist - not tested
   createList(name:string):void{
     this.rest.createList(name);
     this.getOverview();
     console.log(name);
   }
 
+  //function to assign the selected list on click
   assignSelected(selected:TodoListModel)
   {
     console.log(selected);

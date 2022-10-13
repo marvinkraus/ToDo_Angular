@@ -4,6 +4,8 @@ import { TodoListType } from 'app/types/todo-list.type';
 import { RestService } from 'app/service/rest.service';
 import { todoListElements } from 'app/models/todo-list-elements.model';
 import { singletask } from 'app/models/todo-list-singletask-model';
+import { TaskList } from 'app/mock-data';
+import { MockProviderService } from 'app/service/mock-provider.service';
 
 @Component({
   selector: 'app-list-elements',
@@ -14,27 +16,48 @@ export class ListElementsComponent implements OnInit {
 
   @Input() currentList?: TodoListModel;
 
-  public testdetails: singletask = new singletask("123", "Hilve", "gds", false);
-  public testelements: todoListElements = new todoListElements("123", [this.testdetails]);
+  //variable to saved the current selected task
+  public selectedTask?:singletask;
 
-  constructor(private rest: RestService) { }
+  //to use with the single get (parentID)
+  private parentID = this.currentList?.id;
+
+  //Placeholder, da wir die Restschnittstelle nicht geschafft hatten
+  private tasklist = TaskList;
+  
+
+  //if mockservice works this is needed
+  //tasks :singletask[] = []
+ 
+
+  public testelements: todoListElements = new todoListElements("parent-id", this.tasklist);
+  constructor(private rest: RestService, private mockservice: MockProviderService) { }
   
 
 
   ngOnInit(): void {
 
-    //let test2:TodoListModel = this.rest.getSingle("28773d14-664d-45a5-b746-a360b99007be");
 
-    let test:TodoListModel = new TodoListModel("test", "test2");
-    this.currentList = test;
 
-    
-    
+    //this.getTasks
    
   }
 
+    
+  assignSelected(selected:singletask)
+  {
+    console.log(selected);
+    this.selectedTask = selected;
+  }
+
+  /* doesnt work yet
+  getTasks():void {
+    this.mockservice.getall().subscribe(tasks => this.tasks = tasks)
+  }
+*/
+
   //TODO: returns single list with the parentid 
-  /*getSingle():void{
+  /*getSingle(this.parentid):void{
     this.rest.getSingle().subscribe({
       next: (value) => {
         this.list = this.converter.convertList(value);

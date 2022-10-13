@@ -1,3 +1,5 @@
+//class that describes a single todolist
+
 import { singletask } from "./todo-list-singletask-model";
 
 export class todoListElements{
