@@ -12,11 +12,13 @@ import { RestService } from '../service/rest.service';
 export class ListOverviewComponent implements OnInit {
 
   public list: TodoListModel[] = []; 
+  
 
   constructor(private rest: RestService, private converter: ConverterListService) {
 
    }
 
+   public name: string ="";
   ngOnInit(): void {
     this.getOverview();
   }
@@ -30,6 +32,12 @@ export class ListOverviewComponent implements OnInit {
         console.log(error)
       }
     });
+  }
+
+  createList(name:string):void{
+    this.rest.createList(name);
+    this.getOverview();
+    console.log(name);
   }
 
 }

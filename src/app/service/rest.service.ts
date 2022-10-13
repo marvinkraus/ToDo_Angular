@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { environment } from 'environments/environment';
 import { TodoListModel } from '../models/todo-list.model';
 import { TodoListType } from '../types/todo-list.type';
 import { PathService } from './path.service';

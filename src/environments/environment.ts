@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   baseURL: "http://mock.dev.xtain.net/",
-  nachname: "all"
+  nachname: "traub"
 };
 
 /*

@@ -9,6 +9,8 @@ import { ListOverviewComponent } from './list-overview/list-overview.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListDetailsComponent } from './list-details/list-details.component';
 import {MatMenuModule} from '@angular/material/menu'; 
+import { FormsModule } from '@angular/forms';
+import { ListElementsComponent } from './list-elements/list-elements.component';
 
 
 
@@ -17,6 +19,7 @@ import {MatMenuModule} from '@angular/material/menu';
     AppComponent,
     ListOverviewComponent,
     ListDetailsComponent,
+    ListElementsComponent,
     
   ],
   imports: [
@@ -25,8 +28,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatToolbarModule,
     MatIconModule,
     HttpClientModule,
-    MatMenuModule
-
+    MatMenuModule,
+    FormsModule
 
     
   ],

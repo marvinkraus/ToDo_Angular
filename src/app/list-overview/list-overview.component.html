@@ -1,4 +1,12 @@
 <p>list-overview works!</p>
 
 
+<button (click)="getOverview()">test</button>
+
+<form>
+<label>Name der Liste</label>
+<input type="text" name="name" [(ngModel)]="name" >
+<input type="submit" name="submit" (click)="createList(name)">
+
+
 <p *ngFor="let todoList of list">{{todoList.name}}</p>
