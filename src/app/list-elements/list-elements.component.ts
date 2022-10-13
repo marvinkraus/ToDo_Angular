@@ -8,7 +8,7 @@ import { TodoListType } from 'app/types/todo-list.type';
 })
 export class ListElementsComponent implements OnInit {
 
-  @Input() selectedList?: TodoListType;
+  @Input() currentList?: TodoListType;
   constructor() { }
 
   ngOnInit(): void {
