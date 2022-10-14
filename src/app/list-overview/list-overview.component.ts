@@ -46,7 +46,7 @@ export class ListOverviewComponent implements OnInit {
     });
   }
   getSingle():void{
-    this.rest.getSingle().subscribe({
+    this.rest.getSingle("28773d14-664d-45a5-b746-a360b99007be").subscribe({
       next: (value) => {
         this.list = this.converter.convertList(value);
         this.selectedList = this.list[0];
