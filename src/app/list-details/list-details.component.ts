@@ -12,6 +12,8 @@ export class ListDetailsComponent implements OnInit {
 
   isSelected:boolean = false;
 
+  currentText:string = "";
+
   @Input() currentTask?: singletask;
 
   ngOnInit(): void {
