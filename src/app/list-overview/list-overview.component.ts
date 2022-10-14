@@ -45,12 +45,39 @@ export class ListOverviewComponent implements OnInit {
       }
     });
   }
+  getSingle():void{
+    this.rest.getSingle().subscribe({
+      next: (value) => {
+        this.list = this.converter.convertList(value);
+        this.selectedList = this.list[0];
+
+      } , 
+      error : (error) => {
+        console.log(error)
+      }
+    });
+  }
 
   //creates a new todolist - not tested
+  
   createList(name:string):void{
-    this.rest.createList(name);
-    this.getOverview();
+    
+   
     console.log(name);
+
+    this.rest.createList(name).subscribe({
+      next: (value) => {
+        this.list = this.converter.convertList(value);
+        console.log(this.list);
+        //this.selectedList = this.list[0];
+        this.getOverview();
+
+      } , 
+      error : (error) => {
+        console.log(error)
+      }
+    });
+    
   }
 
   //function to assign the selected list on click
