@@ -7,31 +7,17 @@
  <mat-card *ngIf="currentList">
     <mat-selection-list>
       <h1 id="header-mat-card">{{currentList.name}}</h1>
-      <mat-list-option  class="mat-list-option" class="mat-primary" name="selectedList" *ngFor="let task of testelements.alltasks" (click)="assignSelected(task)"   [value]="task"  > {{task.taskname}}
-        <div style="display:flex; justify-content:space-between;align-items:center">
-          <div>
-            <div>
-              <div style="margin-top:-30px">
-                <p matLine>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <!--button mat-icon-button>
-              <mat-icon>delete</mat-icon>
-            </button-->
-          </div>
-        </div>
+      <mat-list-option  class="mat-list-option" class="mat-primary" name="selectedList" *ngFor="let task of testelements.alltasks" (click)="assignSelected(task)"   [value]="task"  >
+
+        <p>{{task.taskname}}
+          </p>
+
       </mat-list-option>
     </mat-selection-list>
-    </mat-card>
-
-
- 
+    <button mat-icon-button class="tonne">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card>
 <app-list-details
-[currentTask]="selectedTask"
-
->
-
+[currentTask]="selectedTask">
 </app-list-details>
