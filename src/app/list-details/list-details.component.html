@@ -30,10 +30,12 @@
 
 <p>update content </p>
 
+<mat-card >
 <form>
-    <textarea value="currentText" > {{currentTask.taskdescription}} </textarea>
+    <textarea id="task-write" value="currentText" > {{currentTask.taskdescription}} </textarea>
     <input type="submit" (click)="switchSelect()">
 </form>
+</mat-card>
 
 </div>
 
