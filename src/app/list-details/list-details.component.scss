@@ -1,3 +1,4 @@
+
 input[type=checkbox]{
     height:40px;
     width: 40px;
@@ -19,4 +20,56 @@ mat-card-title{
     width: fit-content;
 }
 
+
+mat-card{
+    background-color: #3F51B5;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10px;
+    margin-bottom: 1vh;
+
+}
+
+.mat-list-option {
+
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+
+
+}
+
+mat-list-option:hover{
+
+    background-color: white;
+    color: black;
+    font-size: 23px;
+    
+
+}
+
+
+h1{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+
+
+}
+
+p{
+    color: white;
+}
+
+mat-card-title{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
+
+mat-card-actions{
+    color: white;
+}
 

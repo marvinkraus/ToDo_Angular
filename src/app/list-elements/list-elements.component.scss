@@ -1,15 +1,50 @@
+
 mat-card{
-    background-color: #3F51B5;
-    margin-left: 25%;
-    margin-right: 25%;
-    color: white;
+  background-color: #3F51B5;
+  margin-left: 25%;
+  margin-right: 25%;
+  color: white;
+  border-radius: 10px;
+margin-bottom: 1vh;
 }
 
 mat-list-option{
-    color: white;
+  color: white;
 }
 
 .tonne:hover{
-  color:red;
-  background-color: black;
+color:red;
+background-color: black;
 }
+
+
+
+.mat-list-option {
+
+color: white;
+font-size: 20px;
+padding: 10px;
+
+
+}
+
+mat-list-option:hover{
+
+background-color: white;
+color: black;
+font-size: 23px;
+
+
+}
+
+
+h1{
+font-size: 30px;
+color: white;
+text-align: center;
+font-weight: 600;
+
+
+}
+
+
