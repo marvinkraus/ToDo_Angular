@@ -27,6 +27,7 @@ mat-card{
     margin-right: 25%;
     border-radius: 10px;
     margin-bottom: 1vh;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 
 }
 
@@ -60,6 +61,9 @@ h1{
 
 p{
     color: white;
+    font-size: 18px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+
 }
 
 mat-card-title{
@@ -73,3 +77,26 @@ mat-card-actions{
     color: white;
 }
 
+#task-write{
+    height: 9vh;
+    width: 100%;
+    font-size: 18px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+
+}
+
+input[type=submit]{
+
+    width: 30%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 24px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+input[type=submit]:hover{
+    background-color: #b7b7b7;
+    color: white;
+}
