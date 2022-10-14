@@ -10,13 +10,25 @@ export class ListDetailsComponent implements OnInit {
 
   constructor() { }
 
- 
+  isSelected:boolean = false;
 
   @Input() currentTask?: singletask;
 
   ngOnInit(): void {
   }
 
+  switchSelect():void {
+    if(this.isSelected == false)
+    {
+      this.isSelected = true;
+    }
+
+    else {
+      this.isSelected =false;
+    }
+    console.log(this.isSelected);
+
+  }
 
 
 }

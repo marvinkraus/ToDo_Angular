@@ -1,8 +1,7 @@
 
+<div *ngIf="currentTask">
 
-
-
-<mat-card *ngIf="currentTask">   
+<mat-card>   
     <mat-card-title>Taskname: {{currentTask.taskname}} 
         <form>
             <input type="checkbox">
@@ -19,7 +18,7 @@
     </mat-card-content>
 
     <mat-card-actions>
-        <button mat-button>UPDATE</button>
+        <button  mat-button  (click)="switchSelect()">UPDATE </button>
         <button mat-button>DELETE</button>
       
 
@@ -27,5 +26,16 @@
 </mat-card>
 
 
+<div *ngIf="isSelected"  class="editdetails">
 
- 
+<p>update content </p>
+
+<form>
+    <input class="inputfield" type="text" value="{{currentTask.taskdescription}}">
+    <input type="submit" (click)="switchSelect()">
+</form>
+
+</div>
+
+
+</div>
